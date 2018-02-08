@@ -13,7 +13,8 @@
 #' @import rappdirs
 #' @import utils
 #'
-check_dl_file = function(master_file, fname = NULL, md5check = TRUE, dest=local_path()){
+#' @export
+check_dl_file = function(master_file, fname = NULL, md5check = TRUE, dest=cache_get_dir()){
   files = read.csv(master_file)
   if(!is.null(fname)){
     files = files[files$filename == fname,]

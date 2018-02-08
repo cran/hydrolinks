@@ -49,9 +49,9 @@ get_shape_by_id = function(match_id, feature_type = c("flowline", "waterbody"), 
   #lookup table file info is always in the same file
   check_dl_file(system.file('extdata/shape_id_cache.csv', package='hydrolinks'), fname = paste0(db_name, ".zip"))
 
-  con = dbConnect(RSQLite::SQLite(), file.path(local_path(), 'unzip', paste0(db_name, ".zip"), paste0(db_name, ".sqlite3")))
+  con = dbConnect(RSQLite::SQLite(), file.path(cache_get_dir(), 'unzip', paste0(db_name, ".zip"), paste0(db_name, ".sqlite3")))
 
-  sql = paste0('SELECT * from id_lookup where ', match_column, ' IN (', paste(match_id, collapse = ','), ')')
+  sql = paste0("SELECT * from id_lookup where ", match_column, " IN ('", paste(match_id, collapse = "','"), "')")
 
   shape = dbGetQuery(con, sql)
 
@@ -65,14 +65,19 @@ get_shape_by_id = function(match_id, feature_type = c("flowline", "waterbody"), 
   if(length(files) > 0){
     for(i in 1:length(files)){
       check_dl_file(dinfo$file_index_path, fname = files[i])
-      shapefile = st_read(file.path(local_path(), "unzip", files[i], dinfo$shapefile_name))
+      shapefile = st_read(file.path(cache_get_dir(), "unzip", files[i], dinfo$shapefile_name))
       features = shapefile[shapefile[,match_column, drop = TRUE] %in% match_id,]
       shapes[[i]] = features
     }
   }
-  if(length(shapes) > 1)
+  if(length(shapes) > 1){
     return(do.call(rbind, shapes))
-  else
+  }
+  else if(length(shapes) > 0){
     return(shapes[[1]])
+  }
+  else{
+    return(NA)
+  }
 }
 
