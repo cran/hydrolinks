@@ -1,4 +1,4 @@
-6c6ade15c719b0228a2ff9cd1ee78ddf *DESCRIPTION
+8095a7594965974ac9af3002856c804d *DESCRIPTION
 65a47bc58c76fcc38fa0607b5b49fa64 *LICENSE
 9502a25152868626d48f677d8477eb36 *NAMESPACE
 a52d8aea7547f13e67483ac551792c10 *NEWS.md
@@ -12,14 +12,12 @@ f19e696e0aef1ce9611a0e0305322df5 *R/link_to_waterbodies.R
 fe045949331ad4ab201952f3e7fbb2e2 *R/link_waterbody_centroids.R
 de19dbee53d9877db9068032f21f6fcc *R/local_path_helpers.R
 602fc1306097635a8b36fd1c4cf56769 *R/traverse_flowlines.R
-26fcbae473eafbbc3f60164625c41921 *build/vignette.rds
+15951012570a8a2d0a02961dd231d5af *build/vignette.rds
 f12af0183d40936d6445e4e2b0cdcb61 *inst/CITATION
-adf9da04f613c5f429a201958d0f2d7c *inst/doc/Hydrologic-Network-Traversal.R
-bd693f3b1beedd020661b8e9898505ec *inst/doc/Hydrologic-Network-Traversal.Rmd
-78bf75ca5d57b50baa299219b5ef3cd6 *inst/doc/Hydrologic-Network-Traversal.html
-825140c9b2cdbb3069cedb7e6db7c78f *inst/doc/wqp_lake_linking_example.R
-fe3bb0a6bcc22d8fd8e6ffdfe680c50c *inst/doc/wqp_lake_linking_example.Rmd
-cfc47b03601ac48d4441b255d957b6a3 *inst/doc/wqp_lake_linking_example.html
+cccd7c0c222297d5b944e0d6bd81a69f *inst/doc/Hydrologic-Network-Traversal.html
+b46c32e77ca0ea97f90a1adf14106467 *inst/doc/Hydrologic-Network-Traversal.html.asis
+189d6f78aaffd9a9c1c383f845c7aae7 *inst/doc/wqp_lake_linking_example.html
+05674ef11298b8064ca2918211b6f86e *inst/doc/wqp_lake_linking_example.html.asis
 33ecb1d56ab58315a26458b8cfd4f061 *inst/extR/build_id_tables.R
 818fe17d97766ea581a25bda4dcd3fbe *inst/extR/format_data.R
 b4c3665d91cec811e9b8074d4b095472 *inst/extR/general_functions.R
@@ -53,5 +51,7 @@ bf5bb6bf9cd50a00e22d65921ad525d7 *man/cache_set_dir.Rd
 ccdcf8dfa8c2c852cfb9ce7d7d312543 *tests/testthat/test-flowline-linking.R
 896f9f095ffa628aac30159cec6ffc07 *tests/testthat/test-lake-linking.R
 a1ec769935deaa5679070a2bd86929de *tests/testthat/test-traversal.R
-bd693f3b1beedd020661b8e9898505ec *vignettes/Hydrologic-Network-Traversal.Rmd
-fe3bb0a6bcc22d8fd8e6ffdfe680c50c *vignettes/wqp_lake_linking_example.Rmd
+997a5eb962057142f36a6ee3da1905be *vignettes/Hydrologic-Network-Traversal.Rmd
+b46c32e77ca0ea97f90a1adf14106467 *vignettes/Hydrologic-Network-Traversal.html.asis
+c0b7f706b6583033b629348d4d361a83 *vignettes/wqp_lake_linking_example.Rmd
+05674ef11298b8064ca2918211b6f86e *vignettes/wqp_lake_linking_example.html.asis

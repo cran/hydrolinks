@@ -1,7 +1,7 @@
 Package: hydrolinks
 Type: Package
 Title: Hydrologic Network Linking Data and Tools
-Version: 0.9.3
+Version: 0.10.0
 Authors@R: c( person("Tobi", "Hahn", role = c("aut"), 
       email = "hahnt2@rpi.edu"),
     person("Luke", "Winslow", role = c("aut", "cre"), 
@@ -15,18 +15,18 @@ Description: Tools to link geographic data with hydrologic network, including la
 Imports: dplyr, dbplyr, httr, tools, rappdirs, sf (>= 0.6), RSQLite,
         units, stats
 Suggests: testthat, knitr, rmarkdown, dataRetrieval, USAboundaries,
-        ggplot2, gridExtra, kableExtra
+        ggplot2, gridExtra, kableExtra, R.rsp
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
-VignetteBuilder: knitr
+VignetteBuilder: R.rsp
 NeedsCompilation: no
-Packaged: 2018-03-26 15:18:11 UTC; lawinslow
+Packaged: 2018-04-12 20:24:26 UTC; lawinslow
 Author: Tobi Hahn [aut],
   Luke Winslow [aut, cre],
   Taylor Leach [ctb],
   Kevin Rose [ths]
 Maintainer: Luke Winslow <lawinslow@gmail.com>
 Repository: CRAN
-Date/Publication: 2018-03-27 15:59:56 UTC
+Date/Publication: 2018-04-13 08:36:15 UTC

@@ -11,6 +11,11 @@ vignette: >
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, cache=TRUE)
+
+is_check <- ("CheckExEnv" %in% search()) || any(c("_R_CHECK_TIMINGS_",
+             "_R_CHECK_LICENSE_") %in% names(Sys.getenv()))
+knitr::opts_chunk$set(eval = !is_check)
+
 ```
 
 ## Linking Water Quality Portal 
@@ -35,6 +40,7 @@ library(USAboundaries)
 #library(ggplot2)
 #library(gridExtra)
 library(sf)
+hydrolinks::cache_set_dir(temppath = TRUE)
 
 lsites = whatWQPsites(siteType ="Lake, Reservoir, Impoundment", statecode='US:55')
 ```
@@ -45,7 +51,7 @@ returned by this query.
 Now, lets link all these sites to the NHDH. After the initial point-in-polygon linking, I will take
 the remainder and use the centroid matching. 
 
-```{r link, eval=TRUE, echo=TRUE, warning=FALSE, include=TRUE, message=FALSE}
+```{r link, eval=TRUE, echo=TRUE, warning=FALSE, message=FALSE, results='hide'}
 
 linked_lakes = link_to_waterbodies(lsites$LatitudeMeasure, lsites$LongitudeMeasure, lsites$MonitoringLocationIdentifier, dataset = 'nhdh', buffer = 0)
 
